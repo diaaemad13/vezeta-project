@@ -1,0 +1,32 @@
+{% extends 'base.html' %}
+{% load static %}
+{% load crispy_forms_tags %}
+
+{% block body %}
+<div dir="rtl">
+    <div class="container">
+        <div class="signup">
+            <div class="col-md-9">
+                <form method="POST" enctype="multipart/form-data">
+                    <h4 class="auth-header">تسجيل الدخول</h4>
+                    {% csrf_token %}
+                    <div class="form-group">
+                        {{form.username|as_crispy_field}}
+                    </div>
+                    <div class="form-group">
+                        {{ form.password|as_crispy_field }}
+                    </div>
+                    <div class="buttons-w">
+                        <button type="submit" class="btn btn-success ml-5">تسجيل</button>
+                    </div>
+                    <select name="ccc" id="">
+                        <option value="heart">heart sp</option>
+                        <option value="eay">eay sp</option>
+                    </select>
+                    <div>{{ specializing }}</div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock body %}
