@@ -1,3 +1,4 @@
 # vezeta-project
 Online hospital to book a doctor 
-By Django
+Template: HTML,CSS,Bootstrap
+BackEnd: Django
